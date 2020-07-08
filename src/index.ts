@@ -17,7 +17,7 @@ import {
 	getRoleObject
 } from './object';
 
-export default {
+export {
 	createLogMessage,
 	parseChannelMention,
 	parseMemberMention,

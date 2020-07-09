@@ -1,19 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getRoleObject = exports.getMemberObject = exports.getGuildObject = exports.getChannelObject = exports.transformObject = exports.notify = exports.countUniqueWords = exports.capitalise = exports.awaitMessages = exports.parseRoleMention = exports.parseMemberMention = exports.parseChannelMention = exports.createLogMessage = void 0;
 const general_1 = require("./general");
+Object.defineProperty(exports, "createLogMessage", { enumerable: true, get: function () { return general_1.createLogMessage; } });
+Object.defineProperty(exports, "parseChannelMention", { enumerable: true, get: function () { return general_1.parseChannelMention; } });
+Object.defineProperty(exports, "parseMemberMention", { enumerable: true, get: function () { return general_1.parseMemberMention; } });
+Object.defineProperty(exports, "parseRoleMention", { enumerable: true, get: function () { return general_1.parseRoleMention; } });
+Object.defineProperty(exports, "awaitMessages", { enumerable: true, get: function () { return general_1.awaitMessages; } });
+Object.defineProperty(exports, "capitalise", { enumerable: true, get: function () { return general_1.capitalise; } });
+Object.defineProperty(exports, "countUniqueWords", { enumerable: true, get: function () { return general_1.countUniqueWords; } });
+Object.defineProperty(exports, "notify", { enumerable: true, get: function () { return general_1.notify; } });
+Object.defineProperty(exports, "transformObject", { enumerable: true, get: function () { return general_1.transformObject; } });
 const object_1 = require("./object");
-exports.default = {
-    createLogMessage: general_1.createLogMessage,
-    parseChannelMention: general_1.parseChannelMention,
-    parseMemberMention: general_1.parseMemberMention,
-    parseRoleMention: general_1.parseRoleMention,
-    awaitMessages: general_1.awaitMessages,
-    capitalise: general_1.capitalise,
-    countUniqueWords: general_1.countUniqueWords,
-    notify: general_1.notify,
-    transformObject: general_1.transformObject,
-    getChannelObject: object_1.getChannelObject,
-    getGuildObject: object_1.getGuildObject,
-    getMemberObject: object_1.getMemberObject,
-    getRoleObject: object_1.getRoleObject
-};
+Object.defineProperty(exports, "getChannelObject", { enumerable: true, get: function () { return object_1.getChannelObject; } });
+Object.defineProperty(exports, "getGuildObject", { enumerable: true, get: function () { return object_1.getGuildObject; } });
+Object.defineProperty(exports, "getMemberObject", { enumerable: true, get: function () { return object_1.getMemberObject; } });
+Object.defineProperty(exports, "getRoleObject", { enumerable: true, get: function () { return object_1.getRoleObject; } });

@@ -1,3 +1,6 @@
+import IntervalsController from './controllers/IntervalsController';
+import QueueController from './controllers/QueueController';
+
 import {
 	createLogMessage,
 	parseChannelMention,
@@ -7,7 +10,8 @@ import {
 	capitalise,
 	countUniqueWords,
 	notify,
-	transformObject
+	transformObject,
+	hasRole
 } from './general';
 
 import {
@@ -17,7 +21,18 @@ import {
 	getRoleObject
 } from './object';
 
+import { mute, unmute, warn, unwarn, ban } from './moderation';
+
+import {
+	createUserModerationEmbed,
+	createRoleEmbed,
+	createClearEmbed,
+	createEmbed
+} from './embed';
+
 export {
+	IntervalsController,
+	QueueController,
 	createLogMessage,
 	parseChannelMention,
 	parseMemberMention,
@@ -30,5 +45,15 @@ export {
 	getChannelObject,
 	getGuildObject,
 	getMemberObject,
-	getRoleObject
+	getRoleObject,
+	hasRole,
+	mute,
+	unmute,
+	warn,
+	unwarn,
+	ban,
+	createUserModerationEmbed,
+	createRoleEmbed,
+	createClearEmbed,
+	createEmbed
 };

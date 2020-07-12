@@ -1,14 +1,9 @@
-import { ActivityType, Snowflake, Guild, Message } from 'discord.js';
-
-export type ListenerHandler = (...args: any[]) => void; // eslint-disable-line
-
-export type Template = string;
+import { Snowflake, Guild, Message } from 'discord.js';
 
 export type AlertLevel = 'info' | 'warn' | 'error';
 
-export interface Presence {
-	message: string;
-	type: ActivityType;
+export interface ControllerOptions {
+	name: string;
 }
 
 export interface QueueCall {
@@ -30,7 +25,6 @@ export interface ModerationEmbedOptions {
 	date?: Date;
 	member: Snowflake;
 	moderator: Snowflake;
-	channel: Snowflake;
 }
 
 export interface RoleEmbedOptions {
@@ -49,31 +43,15 @@ export interface ClearEmbedOptions {
 	count: number;
 }
 
-export interface EventVariable {
-	name: string;
-	value: string;
-}
-
-export interface EventOptions {
-	variables: EventVariable[];
-	template: Template;
-}
-
 export interface NotificationOptions {
 	guild: Guild;
 	channel: Snowflake;
 	notification?: string | Message;
 }
 
-export interface LogOptions {
-	guild: Guild;
-	notification: string | Error;
-	alertLevel: AlertLevel;
-}
-
 export interface UserModerationOptions {
 	member: Snowflake;
 	moderator: Snowflake;
-	channel?: Snowflake;
+	channel: Snowflake /** moderation channel */;
 	reason?: string;
 }

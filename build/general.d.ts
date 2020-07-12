@@ -1,4 +1,10 @@
-import { TextChannel, GuildMember, Message } from 'discord.js';
+import {
+	TextChannel,
+	GuildMember,
+	Message,
+	Guild,
+	Snowflake
+} from 'discord.js';
 import { AlertLevel, NotificationOptions } from './typings/interfaces';
 export declare function createLogMessage(
 	message: string,
@@ -20,3 +26,8 @@ export declare function awaitMessages(
 	channel: TextChannel,
 	member: GuildMember
 ): Promise<string>;
+export declare function hasRole(
+	guild: Guild,
+	role: string,
+	member: Snowflake
+): boolean;

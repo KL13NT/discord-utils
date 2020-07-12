@@ -2,7 +2,6 @@
 	"compilerOptions": {
 		"target": "es6",
 		"module": "commonjs",
-		"typeRoots": ["./node_modules/@types"],
 		"incremental": true,
 		"lib": ["ES2016", "ES2017", "ES2018", "ES2019"],
 		"checkJs": false,
@@ -28,5 +27,5 @@
 		"skipLibCheck": true
 	},
 	"include": ["./src/**/*"],
-	"exclude": []
+	"exclude": ["./node_modules"]
 }

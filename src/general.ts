@@ -1,6 +1,13 @@
-import { TextChannel, GuildMember, Message, MessageEmbed } from 'discord.js';
+import {
+	TextChannel,
+	GuildMember,
+	Message,
+	MessageEmbed,
+	Guild,
+	Snowflake
+} from 'discord.js';
 
-import { getChannelObject } from './object';
+import { getChannelObject, getMemberObject, getRoleObject } from './object';
 
 import { AlertLevel, NotificationOptions } from './typings/interfaces';
 
@@ -120,4 +127,14 @@ export async function awaitMessages(channel: TextChannel, member: GuildMember) {
 	};
 
 	return (await channel.awaitMessages(filter, options)).first().content;
+}
+
+/**
+ * Checks whether member has a specific role
+ */
+export function hasRole(guild: Guild, role: string, member: Snowflake) {
+	const targetMember = getMemberObject(guild, member);
+	const targetRole = getRoleObject(guild, role);
+
+	return targetMember.roles.cache.some(role => role.id === targetRole.id);
 }

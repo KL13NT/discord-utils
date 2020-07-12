@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.awaitMessages = exports.transformObject = exports.capitalise = exports.countUniqueWords = exports.notify = exports.parseRoleMention = exports.parseMemberMention = exports.parseChannelMention = exports.createLogMessage = void 0;
+exports.hasRole = exports.awaitMessages = exports.transformObject = exports.capitalise = exports.countUniqueWords = exports.notify = exports.parseRoleMention = exports.parseMemberMention = exports.parseChannelMention = exports.createLogMessage = void 0;
 const discord_js_1 = require("discord.js");
 const object_1 = require("./object");
 function createLogMessage(message, alertLevel) {
@@ -90,3 +90,9 @@ function awaitMessages(channel, member) {
     });
 }
 exports.awaitMessages = awaitMessages;
+function hasRole(guild, role, member) {
+    const targetMember = object_1.getMemberObject(guild, member);
+    const targetRole = object_1.getRoleObject(guild, role);
+    return targetMember.roles.cache.some(role => role.id === targetRole.id);
+}
+exports.hasRole = hasRole;

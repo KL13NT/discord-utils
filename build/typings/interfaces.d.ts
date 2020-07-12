@@ -1,10 +1,7 @@
-import { ActivityType, Snowflake, Guild, Message } from 'discord.js';
-export declare type ListenerHandler = (...args: any[]) => void;
-export declare type Template = string;
+import { Snowflake, Guild, Message } from 'discord.js';
 export declare type AlertLevel = 'info' | 'warn' | 'error';
-export interface Presence {
-	message: string;
-	type: ActivityType;
+export interface ControllerOptions {
+	name: string;
 }
 export interface QueueCall {
 	func: (...args: any[]) => any;
@@ -21,7 +18,6 @@ export interface ModerationEmbedOptions {
 	date?: Date;
 	member: Snowflake;
 	moderator: Snowflake;
-	channel: Snowflake;
 }
 export interface RoleEmbedOptions {
 	title: string;
@@ -37,27 +33,14 @@ export interface ClearEmbedOptions {
 	channel: Snowflake;
 	count: number;
 }
-export interface EventVariable {
-	name: string;
-	value: string;
-}
-export interface EventOptions {
-	variables: EventVariable[];
-	template: Template;
-}
 export interface NotificationOptions {
 	guild: Guild;
 	channel: Snowflake;
 	notification?: string | Message;
 }
-export interface LogOptions {
-	guild: Guild;
-	notification: string | Error;
-	alertLevel: AlertLevel;
-}
 export interface UserModerationOptions {
 	member: Snowflake;
 	moderator: Snowflake;
-	channel?: Snowflake;
+	channel: Snowflake;
 	reason?: string;
 }

@@ -14,8 +14,7 @@
 		"fix": "prettier --write **/*.ts",
 		"lint": "eslint --ext .js,.ts ./src --config .eslintrc.js --fix --global global",
 		"test": "jest --colors --expand --logHeapUsage --config jest.config.js --verbose --coverage --passWithNoTests",
-		"prerelease": "npm run lint && npm run fix && npm run test && tsc",
-		"release": "standard-version -a",
+		"release": "standard-version",
 		"prepublish": "npm run release",
 		"publish": "git push --follow-tags origin master && npm publish"
 	},
@@ -33,15 +32,16 @@
 		"jest-extended": "^0.11.5",
 		"jsdoc": "^3.6.2",
 		"npm-run-all": "^4.1.5",
-		"prettier": "^2.0.5"
+		"prettier": "^2.0.5",
+		"typescript": "^3.9.5"
 	},
 	"dependencies": {
 		"@babel/polyfill": "^7.4.4",
+		"@tensorflow-models/toxicity": "^1.2.2",
+		"@tensorflow/tfjs": "^2.0.1",
 		"@types/jest": "^26.0.0",
 		"@types/node": "^14.0.14",
-		"discord.js": "^12.0.2",
-		"dotenv": "^8.2.0",
-		"typescript": "^3.9.5"
+		"discord.js": "^12.0.2"
 	},
 	"bugs": {
 		"url": "https://github.com/KL13NT/discord-utils/issues"

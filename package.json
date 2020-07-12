@@ -55,7 +55,7 @@
 		"discord.js"
 	],
 	"files": [
-		"build/**/*",
+		"build",
 		"README.md",
 		"CONTRIBUTING.md",
 		"CHANGELOG.md"

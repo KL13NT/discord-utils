@@ -1,6 +1,6 @@
 {
 	"name": "@kl13nt/discord-utils",
-	"version": "1.2.5",
+	"version": "1.2.6",
 	"description": "A collection of utilities for developing custom discord bots!",
 	"main": "build/index.js",
 	"repository": {

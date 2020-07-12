@@ -1,6 +1,6 @@
 {
 	"name": "@kl13nt/discord-utils",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"description": "A collection of utilities for developing custom discord bots!",
 	"main": "build/index.js",
 	"repository": {
@@ -9,7 +9,7 @@
 	},
 	"author": "Nabil <nabil.tharwat@outlook.com>",
 	"license": "GPL-3.0",
-	"private": true,
+	"private": false,
 	"scripts": {
 		"fix": "prettier --write **/*.ts",
 		"lint": "eslint --ext .js,.ts ./src --config .eslintrc.js --fix --global global",

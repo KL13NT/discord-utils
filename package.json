@@ -1,6 +1,6 @@
 {
 	"name": "@kl13nt/discord-utils",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"description": "A collection of utilities for developing custom discord bots!",
 	"main": "build/index.js",
 	"repository": {
@@ -14,6 +14,7 @@
 		"fix": "prettier --write **/*.ts",
 		"lint": "eslint --ext .js,.ts ./src --config .eslintrc.js --fix --global global",
 		"test": "jest --colors --expand --logHeapUsage --config jest.config.js --verbose --coverage --passWithNoTests",
+		"prerelease": "npm run lint && npm run fix && npm run test",
 		"release": "standard-version",
 		"prepublish": "npm run release",
 		"publish": "git push --follow-tags origin master && npm publish"
@@ -33,6 +34,7 @@
 		"jsdoc": "^3.6.2",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.0.5",
+		"standard-version": "^8.0.1",
 		"typescript": "^3.9.5"
 	},
 	"dependencies": {

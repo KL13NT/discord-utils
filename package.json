@@ -1,6 +1,6 @@
 {
 	"name": "@kl13nt/discord-utils",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "A collection of utilities for developing custom discord bots!",
 	"main": "build/index.js",
 	"repository": {
@@ -17,7 +17,7 @@
 		"prerelease": "npm run lint && npm run fix && npm run test",
 		"release": "standard-version",
 		"prepublish": "npm run release",
-		"publish": "git push --follow-tags origin master && npm publish"
+		"publish": "git push --follow-tags origin master && npm publish --access public --scope=@kl13nt"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^9.0.1",

@@ -1,0 +1,54 @@
+{
+  "projectName": "discord-utils",
+  "projectOwner": "KL13NT",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat)](#contributors)",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "KL13NT",
+      "name": "Nabil Tharwat",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/20807178?v=4",
+      "profile": "https://github.com/KL13NT",
+      "contributions": [
+        "a11y",
+        "question",
+        "audio",
+        "blog",
+        "bug",
+        "business",
+        "code",
+        "content",
+        "data",
+        "design",
+        "doc",
+        "eventOrganizing",
+        "example",
+        "financial",
+        "fundingFinding",
+        "ideas",
+        "infra",
+        "maintenance",
+        "platform",
+        "plugin",
+        "projectManagement",
+        "review",
+        "security",
+        "talk",
+        "test",
+        "tool",
+        "translation",
+        "tutorial",
+        "userTesting",
+        "video"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

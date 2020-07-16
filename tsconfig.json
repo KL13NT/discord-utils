@@ -7,7 +7,7 @@
 		"checkJs": false,
 		"declaration": true,
 		"declarationMap": false,
-		"sourceMap": false,
+		"sourceMap": true,
 		"outDir": "./build",
 		"rootDir": "./src",
 		"removeComments": true,

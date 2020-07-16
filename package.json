@@ -3,6 +3,12 @@
 	"version": "1.2.7",
 	"description": "A collection of utilities for developing custom discord bots!",
 	"main": "build/index.js",
+	"engines": {
+		"node": "12"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/KL13NT/discord-utils.git"
@@ -15,8 +21,9 @@
 		"lint": "eslint --ext .js,.ts ./src --config .eslintrc.js --fix --global global",
 		"test": "jest --colors --expand --logHeapUsage --config jest.config.js --verbose --coverage --passWithNoTests",
 		"prerelease": "npm run lint && npm run fix && npm run test",
+		"push": "git push --follow-tags origin",
 		"release": "standard-version",
-		"postrelease": "git push --follow-tags origin master && npm publish --access public && rmdir /s build"
+		"cleanup": "rmdir /s build"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^9.0.1",

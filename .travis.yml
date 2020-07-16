@@ -3,7 +3,8 @@ scripts:
   - npm install
   - npm install codecov -g
 before_deploy:
-  - npm run release
+  - if [ "$TRAVIS_BRANCH" = "development" ]; then npm run alpha; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run release; fi
 deploy:
   provider: npm
   email: nabil.tharwat@outlook.com

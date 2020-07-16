@@ -23,6 +23,7 @@
 		"prerelease": "npm run lint && npm run fix && npm run test",
 		"push": "git push --follow-tags origin",
 		"release": "standard-version",
+		"alpha": "standard-version -- --prerelease alpha",
 		"cleanup": "rmdir /s build"
 	},
 	"devDependencies": {

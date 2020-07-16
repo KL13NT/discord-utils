@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - '12.16.0'
 scripts:
-  - npm install codecov -g
+  - yarn global add codecov
 before_deploy:
   - if [ "$TRAVIS_BRANCH" = "development" ]; then npm run alpha; fi
   - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run release; fi

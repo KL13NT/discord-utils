@@ -20,9 +20,11 @@
 		"fix": "prettier --write **/*.ts",
 		"lint": "eslint --ext .js,.ts ./src --config .eslintrc.js --fix --global global",
 		"test": "jest --colors --expand --logHeapUsage --config jest.config.js --verbose --coverage --passWithNoTests",
-		"prerelease": "npm run lint && npm run fix && npm run test",
+		"build": "npm run lint && npm run fix && npm run test && tsc",
+		"prerelease": "npm run build",
 		"push": "git push --follow-tags origin",
 		"release": "standard-version",
+		"prealpha": "npm run build",
 		"alpha": "standard-version -- --prerelease alpha",
 		"cleanup": "rmdir /s build"
 	},

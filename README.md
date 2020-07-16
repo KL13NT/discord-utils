@@ -2,11 +2,12 @@
 
 This is a collection of JavaScript/NodeJS utilities for discord bot development.
 
-![NPM](https://img.shields.io/npm/l/@kl13nt/discord-utils?registry_uri=https%3A%2F%2Fregistry.npmjs.org)
+![Build Status](https://travis-ci.com/KL13NT/discord-utils.svg?branch=master)
+![codecov](https://codecov.io/gh/KL13NT/discord-utils/branch/master/graph/badge.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/@kl13nt/discord-utils)
 ![node-current](https://img.shields.io/node/v/@kl13nt/discord-utils)
+![NPM](https://img.shields.io/npm/l/@kl13nt/discord-utils?registry_uri=https%3A%2F%2Fregistry.npmjs.org)
 ![npm](https://img.shields.io/npm/dt/@kl13nt/discord-utils)
-![codecov](https://codecov.io/gh/KL13NT/discord-utils/branch/master/graph/badge.svg)
 ![GitHub issues](https://img.shields.io/github/issues-raw/kl13nt/discord-utils)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/kl13nt/discord-utils)
 

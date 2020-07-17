@@ -4,11 +4,11 @@ import { QueueCall } from '../typings/interfaces';
 import Controller from '../structures/Controller';
 
 /**
- * @global
+ * Defines a queue of function calls. Can be executed in order.
  */
 export default class QueueController extends Controller {
 	ready: boolean;
-	calls: QueueCall[];
+	private calls: QueueCall[];
 
 	constructor(client: Client) {
 		super(client, {
@@ -18,14 +18,23 @@ export default class QueueController extends Controller {
 		this.calls = [];
 	}
 
+	/**
+	 * Initialises the controller
+	 */
 	init = async () => {
 		this.ready = true;
 	};
 
+	/**
+	 * Adds new call to the queue
+	 */
 	enqueue = (call: QueueCall) => {
 		this.calls.push(call);
 	};
 
+	/**
+	 * Executes all calls in order
+	 */
 	executeAll = () => {
 		for (const call of this.calls) {
 			call.func.call(this, ...call.args);

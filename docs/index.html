@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Discord Utils - v1.2.7</title>
+	<meta name="description" content="Documentation for Discord Utils - v1.2.7">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">Discord Utils - v1.2.7</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>Discord Utils - v1.2.7</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#discord-utils" id="discord-utils" style="color: inherit; text-decoration: none;">
+					<h1>Discord Utils</h1>
+				</a>
+				<p>This is a collection of JavaScript/NodeJS utilities for discord bot development.</p>
+				<p><img src="https://travis-ci.com/KL13NT/discord-utils.svg?branch=master" alt="Build Status">
+					<img src="https://codecov.io/gh/KL13NT/discord-utils/branch/master/graph/badge.svg" alt="codecov">
+					<img src="https://img.shields.io/npm/v/@kl13nt/discord-utils" alt="npm (scoped)">
+					<img src="https://img.shields.io/node/v/@kl13nt/discord-utils" alt="node-current">
+					<img src="https://img.shields.io/npm/l/@kl13nt/discord-utils?registry_uri=https%3A%2F%2Fregistry.npmjs.org" alt="NPM">
+					<img src="https://img.shields.io/npm/dt/@kl13nt/discord-utils" alt="npm">
+					<img src="https://img.shields.io/github/issues-raw/kl13nt/discord-utils" alt="GitHub issues">
+				<img src="https://img.shields.io/github/issues-pr-raw/kl13nt/discord-utils" alt="GitHub pull requests"></p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<p>These instructions will get you up and running with discord-utils. All you need is to install using your favourite package manager then require into your code.</p>
+				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
+					<h3>Prerequisites</h3>
+				</a>
+				<p>I haven&#39;t tested this on earlier versions of node. The version it&#39;s tested on is <code>v12.16.0</code>.</p>
+				<a href="#installing" id="installing" style="color: inherit; text-decoration: none;">
+					<h3>Installing</h3>
+				</a>
+				<p>Using NPM:</p>
+				<pre><code class="language-js">npm i @kl13nt/discord-utils</code></pre>
+				<p>Using Yarn:</p>
+				<pre><code class="language-js">yarn add @kl13nt/discord-utils</code></pre>
+				<a href="#available-functionalities" id="available-functionalities" style="color: inherit; text-decoration: none;">
+					<h2>Available Functionalities</h2>
+				</a>
+				<p>To see function names either use <code>import/require</code> in your code (I have full types available) or simply inspect the <code>index.ts</code> file in <code>src</code>. A general classification can be:</p>
+				<ul>
+					<li>Moderation Utils: To mute, warn, and ban members.</li>
+					<li>Object Utils: Helpers for when working with objects such as <code>GuildMember</code> or <code>TextChannel</code> objects.</li>
+					<li>Embed Utils: Helpers for when creating embeds.</li>
+					<li>General Utils: Parsers for different mention types and role handling.</li>
+				</ul>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<p>Without any bundlers:</p>
+				<pre><code class="language-js"><span class="hljs-comment">// import all functions and classes</span>
+<span class="hljs-keyword">const</span> utils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@kl13nt/discord-utils&#x27;</span>);
+
+<span class="hljs-comment">// import specific functions</span>
+<span class="hljs-keyword">const</span> { capitalise } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@kl13nt/discord-utils&#x27;</span>);
+
+capitalise(<span class="hljs-string">&#x27;hello world! this should be capitalised as title case.&#x27;</span>); <span class="hljs-comment">// Hello World! This Should Be Capitalised As Title Case.</span></code></pre>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p>Check <code>CONTRIBUTING.md</code> in this repo.</p>
+				<a href="#changelog" id="changelog" style="color: inherit; text-decoration: none;">
+					<h2>Changelog</h2>
+				</a>
+				<p>Check <code>CHANGELOG.md</code> in this repo, which is automatically generated using <a href="https://github.com/conventional-changelog/standard-version">standard-version</a>.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3 - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+				<a href="#contributors-✨" id="contributors-✨" style="color: inherit; text-decoration: none;">
+					<h2>Contributors ✨</h2>
+				</a>
+				<p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
+				<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+				<!-- prettier-ignore-start -->
+				<!-- markdownlint-disable -->
+				<!-- markdownlint-enable -->
+				<!-- prettier-ignore-end -->
+				<!-- ALL-CONTRIBUTORS-LIST:END -->
+				<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+				<!-- prettier-ignore-start -->
+				<!-- markdownlint-disable -->
+				<!-- markdownlint-enable -->
+				<!-- prettier-ignore-end -->
+				<!-- ALL-CONTRIBUTORS-LIST:END -->
+				<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+				<!-- prettier-ignore-start -->
+				<!-- markdownlint-disable -->
+				<!-- markdownlint-enable -->
+				<!-- prettier-ignore-end -->
+				<!-- ALL-CONTRIBUTORS-LIST:END -->
+				<p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_controllers_intervalscontroller_.html">&quot;controllers/<wbr>Intervals<wbr>Controller&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_controllers_queuecontroller_.html">&quot;controllers/<wbr>Queue<wbr>Controller&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_embed_.html">&quot;embed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_general_.html">&quot;general&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_moderation_.html">&quot;moderation&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_object_.html">&quot;object&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

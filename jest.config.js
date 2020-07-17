@@ -1,6 +1,6 @@
 module.exports = {
 	testEnvironment: 'node',
 	setupFilesAfterEnv: ['jest-extended'],
-	coverageDirectory: './coverage/',
+	coverageDirectory: './coverage',
 	collectCoverage: true
 };

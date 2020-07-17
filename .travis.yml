@@ -7,6 +7,9 @@ scripts:
 before_deploy:
   - if [ "$TRAVIS_BRANCH" = "development" ]; then npm run alpha; fi
   - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run release; fi
+cache:
+  directories:
+    - node_modules
 deploy:
   provider: npm
   email: nabil.tharwat@outlook.com
@@ -21,5 +24,4 @@ branches:
     - master
     - development
 after_success:
-  - npm run test
-  - codecov
+  - codecov -f ./coverage/clover.xml
